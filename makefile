@@ -8,7 +8,7 @@ $(android_native_folder)/local.properties:
 	echo "sdk.dir=$${HOME}/Library/Developer/Xamarin/android-sdk-macosx" >> $(android_native_folder)/local.properties
 
 $(android_native_folder)/dfu/build/outputs/aar/dfu-release.aar: $(android_native_folder)/local.properties
-	gradle assembleRelease -p $(android_native_folder)
+	$(android_native_folder)/gradlew assembleRelease 
 
 $(graddle_output)/dfu-release.aar: $(android_native_folder)/dfu/build/outputs/aar/dfu-release.aar
 	mkdir -p $(graddle_output)

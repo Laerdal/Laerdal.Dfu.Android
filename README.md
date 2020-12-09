@@ -3,6 +3,9 @@
 This is an Xamarin binding library for the Nordic Semiconductors Android library for updating the firmware of their devices over the air via Bluetooth Low Energy.
 The Java library is located here: https://github.com/NordicSemiconductor/Android-DFU-Library
 
+[![Build status](https://dev.azure.com/LaerdalMedical/Healthcare%20Responders/_apis/build/status/Github/Laerdal.Xamarin.Dfu.Android)](https://dev.azure.com/LaerdalMedical/Healthcare%20Responders/_build/latest?definitionId=100)
+[![NuGet Badge](https://buildstats.info/nuget/Laerdal.Xamarin.Dfu.Android)](https://www.nuget.org/packages/Laerdal.Xamarin.Dfu.Android/)
+
 ## Folder structure
 
 - NordicSemiconductor/Android-DFU-Library = Submodule containing [Nordic's code](https://github.com/NordicSemiconductor/Android-DFU-Library)
@@ -29,7 +32,7 @@ git clone --recurse-submodules https://github.com/Laerdal/Laerdal.Xamarin.Dfu.An
 
 Feel free to update the submodule reference / Pull to the latest release from Nordic.
 
-**Don't forget to update the Package version in the GitVersion.yml !!**
+**Don't forget to update the Package version in the .csproj !!**
 
 #### 2) Run **make**
 
