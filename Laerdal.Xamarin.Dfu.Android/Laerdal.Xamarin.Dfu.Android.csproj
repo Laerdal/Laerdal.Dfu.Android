@@ -34,10 +34,6 @@
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageIcon>icon.png</PackageIcon>
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
-        
-        <PackageVersionNordic>1.11.1</PackageVersionNordic>
-        <PackageVersionRevision>0</PackageVersionRevision>
-        <PackageVersion>$(PackageVersionNordic).$(PackageVersionRevision)</PackageVersion>
     </PropertyGroup>
     <ItemGroup>
         <None Include="../icon.png" Pack="true" PackagePath="\"/>
@@ -81,7 +77,9 @@
         <PackageTags>Xamarin;Nordic;DFU;Android;Bluetooth</PackageTags>
         <PackageProjectUrl>https://github.com/Laerdal/Laerdal.Xamarin.Dfu.Android</PackageProjectUrl>
         <RepositoryUrl>https://github.com/Laerdal/Laerdal.Xamarin.Dfu.Android.git</RepositoryUrl> 
-        <RepositoryType>git</RepositoryType> 
+        <RepositoryType>git</RepositoryType>
+
+        <PackageVersion>1.0.0.0</PackageVersion>
 
         <PackageOutputPath Condition=" '$(PackageOutputPath)' == '' ">../$(AssemblyName).Output</PackageOutputPath>
     </PropertyGroup>

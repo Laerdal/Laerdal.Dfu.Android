@@ -16,7 +16,7 @@ $(graddle_output)/dfu-release.aar: $(android_native_folder)/dfu/build/outputs/aa
 
 $(output): $(graddle_output)/dfu-release.aar
 	# Building nuget
-	MSBuild Laerdal.Xamarin.Dfu.Android/*.csproj -t:Rebuild -restore:True -p:Configuration=Release -p:PackageOutputPath=../$(output)
+	MSBuild Laerdal.Xamarin.Dfu.Android/*.csproj -t:Rebuild -restore:True -p:Configuration=Release
 
 clean:
 	rm $(android_native_folder)/local.properties
