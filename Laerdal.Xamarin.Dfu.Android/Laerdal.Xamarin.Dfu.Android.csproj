@@ -35,7 +35,7 @@
         <PackageIcon>icon.png</PackageIcon>
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
         
-        <PackageVersionNordic>1.11.0</PackageVersionNordic>
+        <PackageVersionNordic>1.11.1</PackageVersionNordic>
         <PackageVersionRevision>0</PackageVersionRevision>
         <PackageVersion>$(PackageVersionNordic).$(PackageVersionRevision)</PackageVersion>
     </PropertyGroup>
