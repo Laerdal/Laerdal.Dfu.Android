@@ -32,8 +32,6 @@ git clone --recurse-submodules https://github.com/Laerdal/Laerdal.Xamarin.Dfu.An
 
 Feel free to update the submodule reference / Pull to the latest release from Nordic.
 
-**Don't forget to update the Package version in the .csproj !!**
-
 #### 2) Run **make**
 
 There is a *makefile* included that does everything for you, feel free to read it to know more.
