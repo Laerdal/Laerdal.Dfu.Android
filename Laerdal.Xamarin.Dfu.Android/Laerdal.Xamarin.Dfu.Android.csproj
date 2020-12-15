@@ -84,6 +84,7 @@
         <PackageOutputPath Condition=" '$(PackageOutputPath)' == '' ">../$(AssemblyName).Output</PackageOutputPath>
     </PropertyGroup>
     <ItemGroup>
+        <EmbeddedReferenceJar Include="Jars\*.jar" />
         <LibraryProjectZip Include="Jars\*.aar" />
         <TransformFile Include="Transforms\*.xml" />
     </ItemGroup>
