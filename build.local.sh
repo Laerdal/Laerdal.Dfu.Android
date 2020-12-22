@@ -130,12 +130,18 @@ echo ""
 
 gradle_base_folder=$(dirname `find ./$source_folder/ -iname "gradlew" | head -n 1`)
 echo "Generating $gradle_base_folder/local.properties"
+echo ""
 echo "sdk.dir=$HOME/Library/Developer/Xamarin/android-sdk-macosx" > $gradle_base_folder/local.properties
 
 #chmod +x $gradle_base_folder/gradlew
-#$gradle_base_folder/gradlew dfu:assembleRelease --stacktrace --debug
+#$gradle_base_folder/gradlew dfu:assembleRelease --stacktrace --debug 
 gradle assembleRelease -p $gradle_base_folder
-gradle_output_file=$(dirname `find ./$source_folder/ -iname "dfu-release.aar" | head -n 1`)
+gradle_output_file=`find ./$source_folder/ -ipath "*dfu/build/outputs/aar*" -iname "dfu-release.aar" | head -n 1`
+echo ""
+if [ ! -f "$gradle_output_file" ]; then
+    echo "Failed : $gradle_output_file is not a file"
+    exit 1
+fi
 echo "Built : $gradle_output_file"
 
 echo ""
