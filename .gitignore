@@ -351,3 +351,7 @@ MigrationBackup/
 Laerdal.Xamarin.Dfu.Android/Jars/dfu-release.aar
 
 Laerdal.Xamarin.Dfu.Android.Output/
+Laerdal.Xamarin.Dfu.Android.Zips/
+Laerdal.Xamarin.Dfu.Android.Source/
+
+*.info.json
