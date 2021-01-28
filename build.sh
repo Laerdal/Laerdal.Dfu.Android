@@ -3,11 +3,12 @@
 build_revision=`date +%-m%d%H%M%S`
 
 usage(){
-    echo "usage: ./build.local.sh [-r|--revision build_revision] [-c|--clean-output] [-v|--verbose]"
+    echo "usage: ./build.local.sh [-r|--revision build_revision] [-c|--clean-output] [-v|--verbose] [-o|--output path]"
     echo "parameters:"
     echo "  -r | --revision [build_revision]        Sets the revision number, default = mddhhMMSS ($build_revision)"
     echo "  -c | --clean-output                     Cleans the output before building"
     echo "  -v | --verbose                          Enable verbose build details from msbuild and gradle tasks"
+    echo "  -o | --output [path]                    Output path"
     echo "  -h | --help                             Prints this message"
 }
 
@@ -16,6 +17,9 @@ while [ "$1" != "" ]; do
         -r | --revision )       shift
                                 build_revision=$1
                                 ;;
+        -o | --output )         shift
+                                output_path=$1
+                                ;;
         -c | --clean-output )   clean_output=1
                                 ;;
         -v | --verbose )        verbose=1
@@ -23,14 +27,13 @@ while [ "$1" != "" ]; do
         -h | --help )           usage
                                 exit
                                 ;;
-        * )                     echo
-                                echo "### Wrong parameter: $1 ###"
-                                echo
+        * )                     echo "### Wrong parameter: $1 ###"
                                 usage
                                 exit 1
     esac
     shift
 done
+
 
 # find the latest ID here : https://api.github.com/repos/NordicSemiconductor/Android-DFU-Library/releases/latest
 github_repo_owner=NordicSemiconductor
@@ -207,4 +210,16 @@ if [ -f "$nuget_output_file" ]; then
 else
     echo "Failed : Can't find '$nuget_output_file'"
     exit 1
+fi
+
+if [ ! -z "$output_path" ]; then
+
+    echo
+    echo "### COPY FILES TO OUTPUT ###"
+    echo
+
+    mkdir -p $output_path
+    cp -a $(dirname $nuget_output_file)/. $output_path
+
+    echo "Copied into $output_path"
 fi
