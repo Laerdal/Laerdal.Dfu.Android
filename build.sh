@@ -66,8 +66,8 @@ if [ -z "$github_short_version" ]; then
 fi
 
 # Static configuration
-nuget_project_folder="Laerdal.Xamarin.Dfu.Android"
-nuget_project_name="Laerdal.Xamarin.Dfu.Android"
+nuget_project_folder="Laerdal.Dfu.Android"
+nuget_project_name="Laerdal.Dfu.Android"
 nuget_output_folder="$nuget_project_name.Output"
 nuget_csproj_path="$nuget_project_folder/$nuget_project_name.csproj"
 nuget_filename="$nuget_project_name.$build_version.nupkg"
@@ -75,8 +75,8 @@ nuget_output_file="$nuget_output_folder/$nuget_filename"
 
 nuget_jars_folder="$nuget_project_folder/Jars"
 
-source_folder="Laerdal.Xamarin.Dfu.Android.Source"
-source_zip_folder="Laerdal.Xamarin.Dfu.Android.Zips"
+source_folder="Laerdal.Dfu.Android.Source"
+source_zip_folder="Laerdal.Dfu.Android.Zips"
 source_zip_file_name="$github_short_version.zip"
 source_zip_file="$source_zip_folder/$source_zip_file_name"
 source_zip_url="http://github.com/$github_repo_owner/$github_repo/zipball/$github_tag_name"

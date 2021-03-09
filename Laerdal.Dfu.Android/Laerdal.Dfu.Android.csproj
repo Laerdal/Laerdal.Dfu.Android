@@ -1,4 +1,4 @@
-﻿<Project Sdk="MSBuild.Sdk.Extras/2.0.54">
+﻿<Project Sdk="MSBuild.Sdk.Extras/3.0.23">
 
     <!-- ANDROID -->
     <PropertyGroup>
@@ -15,12 +15,12 @@
     </PropertyGroup>
 
     <PropertyGroup>
-        <RootNamespace>Laerdal.Xamarin.Dfu.Android</RootNamespace>
+        <RootNamespace>Laerdal.Dfu.Android</RootNamespace>
 
-        <PackageId>Laerdal.Xamarin.Dfu.Android</PackageId>
+        <PackageId>Laerdal.Dfu.Android</PackageId>
         <PackageTags>Xamarin;Dfu;Android</PackageTags>
         <PackageDescription>Xamarin wrapper around Nordic.Dfu for iOS. Based on https://github.com/NordicSemiconductor/Android-DFU-Library</PackageDescription>
-        <PackageProjectUrl>https://github.com/Laerdal/Laerdal.Xamarin.Dfu.Android</PackageProjectUrl>
+        <PackageProjectUrl>https://github.com/Laerdal/Laerdal.Dfu.Android</PackageProjectUrl>
         <PackageVersion>1.0.0</PackageVersion>
         <PackageOutputPath>../$(RootNamespace).Output</PackageOutputPath>
         <PackageIcon>icon.png</PackageIcon>
@@ -32,15 +32,15 @@
         <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
 
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
-        <AssemblyName>Laerdal.Xamarin.Dfu.Android</AssemblyName>
+        <AssemblyName>Laerdal.Dfu.Android</AssemblyName>
 
-        <Title>Laerdal.Xamarin.Dfu.Android</Title>
+        <Title>Laerdal.Dfu.Android</Title>
         <Summary>Xamarin Dfu Android</Summary>
         <Description>Xamarin wrapper around Nordic.Dfu for iOS. Based on https://github.com/NordicSemiconductor/Android-DFU-Library</Description>
         <Authors>François Raminosona, Laerdal</Authors>
         <Owners>François Raminosona, Laerdal</Owners>
         <Copyright>François Raminosona, Laerdal</Copyright>
-        <RepositoryUrl>https://github.com/Laerdal/Laerdal.Xamarin.Dfu.Android.git</RepositoryUrl>
+        <RepositoryUrl>https://github.com/Laerdal/Laerdal.Dfu.Android.git</RepositoryUrl>
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
         <RepositoryType>git</RepositoryType>
 
