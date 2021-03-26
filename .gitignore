@@ -350,6 +350,6 @@ MigrationBackup/
 
 Laerdal.Dfu.Android/Jars/dfu-release.aar
 
-Laerdal.Dfu.Android.Output/
-Laerdal.Dfu.Android.Zips/
-Laerdal.Dfu.Android.Source/
+Laerdal.Dfu.Droid.Output/
+Laerdal.Dfu.Droid.Zips/
+Laerdal.Dfu.Droid.Source/
