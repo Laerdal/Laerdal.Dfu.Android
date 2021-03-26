@@ -15,11 +15,11 @@
     </PropertyGroup>
 
     <PropertyGroup>
-        <RootNamespace>Laerdal.Dfu.Android</RootNamespace>
+        <RootNamespace>Laerdal.Dfu.Droid</RootNamespace>
 
-        <PackageId>Laerdal.Dfu.Android</PackageId>
-        <PackageTags>Xamarin;Dfu;Android</PackageTags>
-        <PackageDescription>Xamarin wrapper around Nordic.Dfu for iOS. Based on https://github.com/NordicSemiconductor/Android-DFU-Library</PackageDescription>
+        <PackageId>Laerdal.Dfu.Droid</PackageId>
+        <PackageTags>Xamarin;Dfu;Droid</PackageTags>
+        <PackageDescription>Xamarin wrapper around Nordic.Dfu for Android. Based on https://github.com/NordicSemiconductor/Android-DFU-Library</PackageDescription>
         <PackageProjectUrl>https://github.com/Laerdal/Laerdal.Dfu.Android</PackageProjectUrl>
         <PackageVersion>1.0.0</PackageVersion>
         <PackageOutputPath>../$(RootNamespace).Output</PackageOutputPath>
@@ -32,11 +32,11 @@
         <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
 
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
-        <AssemblyName>Laerdal.Dfu.Android</AssemblyName>
+        <AssemblyName>Laerdal.Dfu.Droid</AssemblyName>
 
-        <Title>Laerdal.Dfu.Android</Title>
-        <Summary>Xamarin Dfu Android</Summary>
-        <Description>Xamarin wrapper around Nordic.Dfu for iOS. Based on https://github.com/NordicSemiconductor/Android-DFU-Library</Description>
+        <Title>Laerdal.Dfu.Droid</Title>
+        <Summary>Xamarin Dfu Droid</Summary>
+        <Description>Xamarin wrapper around Nordic.Dfu for Android. Based on https://github.com/NordicSemiconductor/Android-DFU-Library</Description>
         <Authors>François Raminosona, Laerdal</Authors>
         <Owners>François Raminosona, Laerdal</Owners>
         <Copyright>François Raminosona, Laerdal</Copyright>
@@ -67,4 +67,8 @@
         <LibraryProjectZip Include="Jars\*.aar" />
         <TransformFile Include="Transforms\*.xml" />
     </ItemGroup>
+    <Target Name="CheckAndroidLibraryFilesExist" BeforeTargets="PrepareForBuild">
+        <Error Condition="!Exists('Jars\dfu-release.aar')" Text="Jars\dfu-release.aar does not exist" />
+        <Error Condition="!Exists('Jars\gson-2.8.6.jar')" Text="Jars\gson-2.8.6.jar does not exist" />
+    </Target>
 </Project>
